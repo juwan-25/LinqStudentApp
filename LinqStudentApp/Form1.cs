@@ -58,11 +58,11 @@ namespace LinqStudentApp
                                               select item;
         }
 
-        //학번순 정렬 보기
+        //이름순 정렬 보기
         private void button3_Click(object sender, EventArgs e)
         {
             studentBindingSource.DataSource = from item in students
-                                              orderby item.Grade 
+                                              orderby item.Name 
                                               select item;
         }
 
