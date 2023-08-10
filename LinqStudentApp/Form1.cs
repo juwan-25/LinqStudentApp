@@ -43,14 +43,25 @@ namespace LinqStudentApp
             InitializeComponent();
         }
 
+        //학생 목록 전체 보기
         private void button1_Click(object sender, EventArgs e)
         {
             studentBindingSource.DataSource = students;
+        }
+
+        //소프트웨어과 학생 보기
+        private void button2_Click(object sender, EventArgs e)
+        {
+            studentBindingSource.DataSource = from item in students
+                                              where item.Dept == "소프트웨어과"
+                                              select item;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }
