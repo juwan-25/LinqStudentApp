@@ -83,5 +83,11 @@ namespace LinqStudentApp
                                               orderby item.Grade
                                               select item;
         }
+
+        //프로그램이 시작될 때 전체 목록 보이도록 하기
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            studentBindingSource.DataSource = students;
+        }
     }
 }
