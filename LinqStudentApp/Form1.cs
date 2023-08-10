@@ -45,7 +45,7 @@ namespace LinqStudentApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            studentBindingSource.DataSource = students;
         }
 
         private void button3_Click(object sender, EventArgs e)
