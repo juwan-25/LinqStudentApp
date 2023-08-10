@@ -101,6 +101,7 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "취업 된 학생 보기";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 

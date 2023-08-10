@@ -54,6 +54,7 @@ namespace LinqStudentApp
         {
             studentBindingSource.DataSource = from item in students
                                               where item.Dept == "소프트웨어과"
+                                              orderby item.Grade
                                               select item;
         }
 
@@ -65,6 +66,13 @@ namespace LinqStudentApp
                                               select item;
         }
 
-
+        //취업이 된 학생 보기
+        private void button4_Click(object sender, EventArgs e)
+        {
+            studentBindingSource.DataSource = from item in students
+                                              where item.Employment == true
+                                              orderby item.Grade
+                                              select item;
+        }
     }
 }
