@@ -74,5 +74,14 @@ namespace LinqStudentApp
                                               orderby item.Grade
                                               select item;
         }
+
+        //취업이 되지 않은 학생 보기
+        private void button5_Click(object sender, EventArgs e)
+        {
+            studentBindingSource.DataSource = from item in students
+                                              where item.Employment == false
+                                              orderby item.Grade
+                                              select item;
+        }
     }
 }
